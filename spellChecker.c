@@ -113,13 +113,13 @@ int main(int argc, const char** argv)
         {
             if(strcmp(inputBuffer, "quit") != 0)
             {
-                printf("\n%s is spelled correctly\n\n", inputBuffer);
+                printf("\n%s is spelled\033[0;32m correctly\n\n\033[0m", inputBuffer);
             }
         }
 
         else
         {
-            printf("\n%s is spelled incorrectly", inputBuffer);
+            printf("\n%s is spelled\033[0;31m incorrectly \033[0m", inputBuffer);
 
             HashLink * current;
 
@@ -165,7 +165,7 @@ int main(int argc, const char** argv)
                 }
             }
 
-            printf("\n\nSuggestions: %s, %s, %s, %s, %s\n\n", suggestions[0] , suggestions[1] , suggestions[2] , suggestions[3] , suggestions[4]);
+            printf("\n\nSuggestions:\033[0;32m %s, %s, %s, %s, %s\n\n\033[0m", suggestions[0] , suggestions[1] , suggestions[2] , suggestions[3] , suggestions[4]);
 
 
             for(int i = 0 ; i < 5 ; i++)

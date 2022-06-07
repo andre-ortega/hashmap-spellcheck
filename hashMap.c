@@ -55,7 +55,6 @@ HashLink* hashLinkNew(const char* key, int value, HashLink* next)
  */
 static void hashLinkDelete(HashLink* link)
 {
-
     free(link->key);
     free(link);
 }
@@ -390,7 +389,6 @@ float hashMapTableLoad(HashMap* map)
  */
 void hashMapPrint(HashMap* map)
 {
-
 
     HashLink * link;
 
